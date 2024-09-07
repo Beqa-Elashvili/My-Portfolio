@@ -1,5 +1,7 @@
 import { PROJECTES } from "src@/Constants";
 import { ProjectType } from "src@/assets/types";
+import { CiGlobe } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
 
 export function Projects() {
   return (
@@ -18,7 +20,7 @@ export function Projects() {
               <h6 className="font-semibold">{item.title}</h6>
               <p className="text-sm text-neutral-400">{item.description}</p>
 
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 {item.technologies.map((item: string, index: number) => (
                   <p
                     key={index}
@@ -27,6 +29,23 @@ export function Projects() {
                     {item}
                   </p>
                 ))}
+                {item.live !== "" && (
+                  <div className="">
+                    <a
+                      className=" hover:bg-gray-900 flex items-center gap-2 rounded text-sm bg-neutral-900 px-2 py-1 font-medium text-blue-300"
+                      href={item.live}
+                    >
+                      <CiGlobe />
+                      Live
+                    </a>
+                  </div>
+                )}
+                <a
+                  className="flex hover:bg-gray-900 items-center gap-2 rounded text-sm bg-neutral-900 px-2 py-1 font-medium text-blue-300"
+                  href={item.code}
+                >
+                  <FaGithub /> Code
+                </a>
               </div>
             </div>
             {index !== PROJECTES.length - 1 && (
