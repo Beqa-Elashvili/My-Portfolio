@@ -1,11 +1,10 @@
 export function About() {
   return (
     <div>
-      <h1 className="text-center text-2xl">
+      <h1 className="text-center text-3xl">
         About <span className="text-neutral-400">Me</span>
       </h1>
       <div className="flex justify-between mt-6">
-        <div>fgfhg</div>
         <div>
           React and Next.js for building scalable and efficient applications
           TypeScript and JavaScript for writing clean, maintainable, and complex
