@@ -10,16 +10,7 @@ export const EXPERIENCES: Experiencetype[] = [
     role: "Junior React Front-end Developer",
     company: "LineDevLtd",
     description:
-      "As a junior front-end developer, I've significantly enhanced my ability to structure code efficiently. Collaborating with my team and through dedicated efforts, I continue to gain knowledge every day. Actively engaging in the debugging process provides me with valuable experience. I also write concise articles on various programming topics to broaden my understanding and share insights with a wider audience",
-    technologies: ["React.js", "TypeScript", "JavaScript"],
-    year: "jan 2024 - Present",
-  },
-  {
-    id: uuidv4(),
-    role: "Junior React Front-end Developer",
-    company: "LineDevLtd",
-    description:
-      "As a junior front-end developer, I've significantly enhanced my ability to structure code efficiently. Collaborating with my team and through dedicated efforts, I continue to gain knowledge every day. Actively engaging in the debugging process provides me with valuable experience. I also write concise articles on various programming topics to broaden my understanding and share insights with a wider audience",
+      "As a junior front-end developer, I've significantly enhanced my ability to structure code efficiently. Collaborating with my team and through dedicated efforts, I continue to gain knowledge every day. Actively engaging in the debugging process provides me with valuable experience. I also write concise articles on various programming topics to broaden my understanding and share insights with a wider audience.",
     technologies: ["React.js", "TypeScript", "JavaScript"],
     year: "jan 2024 - Present",
   },
