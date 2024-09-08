@@ -12,7 +12,7 @@ export function About() {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
           className="rounded-2xl  lg:w-1/2 w-full"
-          src="src\assets\images\aboutme.png"
+          src="src/assets/images/Aboutimg.png"
           alt="aboutImg"
         />
         <motion.div
