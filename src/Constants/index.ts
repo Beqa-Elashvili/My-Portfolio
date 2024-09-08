@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 import { Experiencetype, ProjectType } from "src@/assets/types";
-import amazonImage from "/public/images/amazon.png";
-import weatherImage from "/public/images/weatherApp.png";
-import TeacherElecronicMagazineImage from "/public/images/TeacherElectonicMagazine.png";
+import amazonImage from "src@/assets/images/amazon.png";
+import weatherImage from "src@/assets/images/weatherApp.png";
+import TeacherElecronicMagazineImage from "src@/assets/images/TeacherElectonicMagazine.png";
 
 export const EXPERIENCES: Experiencetype[] = [
   {
