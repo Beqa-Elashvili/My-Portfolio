@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import aboutImg from "src@/assets/images/aboutimg.png";
 
 export function About() {
   return (
@@ -12,7 +13,7 @@ export function About() {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
           className="rounded-2xl  lg:w-1/2 w-full"
-          src="src/assets/images/file.png"
+          src={aboutImg}
           alt="aboutImg"
         />
         <motion.div
