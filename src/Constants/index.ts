@@ -1,6 +1,10 @@
 import { v4 as uuidv4 } from "uuid";
 import { Experiencetype, ProjectType } from "src@/assets/types";
 import amazonImage from "src@/assets/images/amazon.png";
+import carRentApplication from "src@/assets/images/carRentApplication.png";
+import MessengerClone from "src@/assets/images/messangerClone.png";
+import InventoryManagement from "src@/assets/images/invetoryManagement.png";
+
 import weatherImage from "src@/assets/images/weatherApp.png";
 import TeacherElecronicMagazineImage from "src@/assets/images/TeacherElectonicMagazine.png";
 
@@ -19,13 +23,54 @@ export const EXPERIENCES: Experiencetype[] = [
 export const PROJECTES: ProjectType[] = [
   {
     id: uuidv4(),
-    title: "Amazon E-Comerce",
-    image: amazonImage,
+    title: "Inventory Management website",
+    image: InventoryManagement,
     description:
-      "This is my biggest personal project an Amazon-inspired E-Commerce platform! 🛒 This platform is packed with features that truly elevate the online shopping experience:  Comprehensive Cart & Checkout: Seamless and intuitive cart and checkout process, designed for a smooth user journey, Wishlist Functionality: Easily save items for later with a fully functional wishlist.Profile Management: Users can update and manage their profile information effortlessly. User Authentication: Secure user registration and login functionality to keep accounts safe. Robust Features: From product browsing to secure transactions, this platform mirrors the essential functionalities of top-tier shopping sites.",
-    technologies: ["React.js", "TypeScript", "Tailwind CSS", "Ant Design"],
-    live: "",
-    code: "https://github.com/Beqa-Elashvili/Amazon-E-Comerce-Project",
+      "A comprehensive Inventory Management website built with Next.js, Node.js, Express, Prisma, and Pusher. This platform provides powerful analytics, purchase and sales tracking, and detailed dashboards to help businesses manage their inventory efficiently. It offers real-time updates, dark mode support, and seamless data interaction for a modern and user-friendly experience.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "postgeSQL",
+      "express",
+      "Prisma",
+      "Tailwind CSS",
+    ],
+    live: "https://inventorymanagement-liard.vercel.app/",
+    code: "https://github.com/Beqa-Elashvili/inventory-management",
+  },
+  {
+    id: uuidv4(),
+    title: "Messenger Clone",
+    image: MessengerClone,
+    description:
+      "A real-time messaging platform built with Next.js, MongoDB, Prisma, and Pusher. This application offers features such as real-time messaging, group chat functionality, and active status tracking for users. It includes secure authentication and user management using NextAuth, allowing for a smooth and engaging communication experience.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Prisma",
+      "Pusher",
+      "Tailwind CSS",
+    ],
+    live: "https://messenger-clone-eight-neon.vercel.app/",
+    code: "https://github.com/Beqa-Elashvili/messenger-clone",
+  },
+  {
+    id: uuidv4(),
+    title: "Car Rent Application",
+    image: carRentApplication,
+    description:
+      "A fully functional Car Rental Application built with Next.js, MongoDB, and NextAuth. Users can easily browse a variety of cars, select rental dates using a calendar, and track their rental days. The application supports reservations, checkout, and secure payments, making the car rental process smooth and user-friendly",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "MongoDb",
+      "Tailwind CSS",
+      "Ant Design",
+    ],
+    live: "https://luxurydrive.vercel.app/",
+    code: "https://github.com/Beqa-Elashvili/Car-Rent-Application",
   },
   {
     id: uuidv4(),
@@ -36,6 +81,16 @@ export const PROJECTES: ProjectType[] = [
     technologies: ["React.js", "JavaScript", "Tailwind CSS", "Ant Design"],
     live: "https://weatherappier.netlify.app/",
     code: "https://github.com/Beqa-Elashvili/Weather_App",
+  },
+  {
+    id: uuidv4(),
+    title: "Amazon E-Comerce",
+    image: amazonImage,
+    description:
+      "This is my biggest personal project an Amazon-inspired E-Commerce platform! 🛒 This platform is packed with features that truly elevate the online shopping experience:  Comprehensive Cart & Checkout: Seamless and intuitive cart and checkout process, designed for a smooth user journey, Wishlist Functionality: Easily save items for later with a fully functional wishlist.Profile Management: Users can update and manage their profile information effortlessly. User Authentication: Secure user registration and login functionality to keep accounts safe. Robust Features: From product browsing to secure transactions, this platform mirrors the essential functionalities of top-tier shopping sites.",
+    technologies: ["React.js", "TypeScript", "Tailwind CSS", "Ant Design"],
+    live: "",
+    code: "https://github.com/Beqa-Elashvili/Amazon-E-Comerce-Project",
   },
   {
     id: uuidv4(),
