@@ -27,7 +27,7 @@ export function Hero() {
           animate="visible"
           className="text-4xl mt-4 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-transparent tracking-tight"
         >
-          Junior React Front-end Developer
+          Junior Front-end Developer
         </motion.p>
         <motion.p
           variants={container(1)}
