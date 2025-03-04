@@ -9,6 +9,7 @@ import { SiMongodb } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiPrisma } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
+import { TbBrandRedux } from "react-icons/tb";
 
 const iconVariants = (duration: number) => ({
   initial: { y: -10 },
@@ -103,6 +104,14 @@ export function Technologies() {
           className="rounded-2xl bg-black border-4 border-neutral-800 p-4"
         >
           <SiMongodb className="text-7xl  text-green-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(2.5)}
+          initial="initial"
+          animate="animate"
+          className="rounded-2xl bg-black border-4 border-neutral-800 p-4"
+        >
+          <TbBrandRedux className="text-7xl  text-purple-500" />
         </motion.div>
         <motion.div
           variants={iconVariants(2.5)}

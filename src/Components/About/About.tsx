@@ -27,15 +27,18 @@ export function About() {
           applications using React and Next.js, and writing clean, maintainable
           code with TypeScript and JavaScript. I’m also skilled in using
           Tailwind CSS to design polished, responsive layouts that enhance the
-          user experience. On the back end, I have experience working with
-          Prisma, Pusher, PostgreSQL, and MongoDB for efficient database
-          management and real-time data handling. I am proficient in building
-          secure and robust back-end architectures to support seamless front-end
-          experiences. I have successfully worked on projects such as a Car
-          Rental Application, a Messenger Clone, and an Inventory Management
-          System. Each of these projects demonstrates my ability to build
-          complex full-stack applications, manage real-time data, and create
-          intuitive, user-friendly solutions.
+          user experience. Developed and optimized global state management using
+          Redux's Provider and store to centralize state across multiple React
+          components, improving the consistency and reliability of the
+          application. On the back end, I have experience working with Prisma,
+          Pusher, PostgreSQL, and MongoDB for efficient database management and
+          real-time data handling. I am proficient in building secure and robust
+          back-end architectures to support seamless front-end experiences. I
+          have successfully worked on projects such as a Car Rental Application,
+          a Messenger Clone, and an Inventory Management System. Each of these
+          projects demonstrates my ability to build complex full-stack
+          applications, manage real-time data, and create intuitive,
+          user-friendly solutions.
         </motion.div>
       </div>
     </div>
