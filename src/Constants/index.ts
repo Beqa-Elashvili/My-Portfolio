@@ -4,6 +4,7 @@ import amazonImage from "src@/assets/images/amazon.png";
 import carRentApplication from "src@/assets/images/carRentApplication.png";
 import MessengerClone from "src@/assets/images/messangerClone.png";
 import InventoryManagement from "src@/assets/images/invetoryManagement.png";
+import VeliClone from "src@/assets/images/Veli-clone.png";
 
 import weatherImage from "src@/assets/images/weatherApp.png";
 import TeacherElecronicMagazineImage from "src@/assets/images/TeacherElectonicMagazine.png";
@@ -11,16 +12,53 @@ import TeacherElecronicMagazineImage from "src@/assets/images/TeacherElectonicMa
 export const EXPERIENCES: Experiencetype[] = [
   {
     id: uuidv4(),
-    role: "Junior React Front-end Developer",
+    role: "Freelance Front-end Developer",
+    company: "Self-Employed",
+    description:
+      "As a freelance front-end developer, I take on diverse projects that allow me to sharpen my coding skills and adapt to various client needs. My work spans building responsive and efficient user interfaces, collaborating with remote teams, and ensuring high-quality deliverables. I focus on Next.js, React.js, TypeScript, and JavaScript to create dynamic web applications. Through each project, I continually refine my problem-solving skills and expand my expertise by staying up-to-date with industry trends. In addition to development.",
+    technologies: [
+      "Next.js",
+      "Redux",
+      "PostgreSQL",
+      "MongoDB",
+      "Prisma",
+      "React.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+    ],
+    year: "Jun.2024 - Present",
+  },
+  {
+    id: uuidv4(),
+    role: "React Front-end Developer",
     company: "LineDevLtd",
     description:
-      "As a junior front-end developer, I've significantly enhanced my ability to structure code efficiently. Collaborating with my team and through dedicated efforts, I continue to gain knowledge every day. Actively engaging in the debugging process provides me with valuable experience. I also write concise articles on various programming topics to broaden my understanding and share insights with a wider audience.",
+      "As front-end developer, I've significantly enhanced my ability to structure code efficiently. Collaborating with my team and through dedicated efforts, I continue to gain knowledge every day. Actively engaging in the debugging process provides me with valuable experience. I also write concise articles on various programming topics to broaden my understanding and share insights with a wider audience.",
     technologies: ["React.js", "TypeScript", "JavaScript"],
-    year: "jan 2024 - Present",
+    year: "Jan.2024 - May.2024",
   },
 ];
 
 export const PROJECTES: ProjectType[] = [
+  {
+    id: uuidv4(),
+    title: "Veli.store-clone E-Commerce Website",
+    image: VeliClone,
+    description:
+      "A fully functional e-commerce website built with Next.js, TypeScript, PostgreSQL, Tailwind CSS, and Redux. This platform offers a seamless shopping experience with robust functionalities, including user authentication, real-time cart updates, and support for product variations such as size and color. The application ensures proper validation of product options and features a responsive design, built with Tailwind CSS for modern styling. Using PostgreSQL for efficient data management and Redux for state management, the platform delivers smooth and dynamic interactions. It also supports features like order history, secure checkout, and user profiles, creating a comprehensive and user-friendly e-commerce experience.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "postgeSQL",
+      "Redux",
+      "Redux/toolkit",
+      "Prisma",
+      "Tailwind CSS",
+    ],
+    live: "https://veli-clone.vercel.app/",
+    code: "https://github.com/Beqa-Elashvili/E-comerce_veli_clone",
+  },
   {
     id: uuidv4(),
     title: "Inventory Management website",

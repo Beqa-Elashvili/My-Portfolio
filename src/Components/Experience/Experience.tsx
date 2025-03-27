@@ -35,7 +35,7 @@ export function Experience() {
                 <span className="text-sm text-purple-100">{item.company}</span>
               </h6>
               <p className="text-sm text-neutral-400">{item.description}</p>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 {item.technologies.map((item: string, index: number) => (
                   <p
                     key={index}
