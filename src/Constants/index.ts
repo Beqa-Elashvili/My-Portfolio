@@ -4,6 +4,8 @@ import amazonImage from "src@/assets/images/amazon.png";
 import carRentApplication from "src@/assets/images/carRentApplication.png";
 import MessengerClone from "src@/assets/images/messangerClone.png";
 import InventoryManagement from "src@/assets/images/invetoryManagement.png";
+import Bog from "src@/assets/images/Bog-clone.png";
+
 import VeliClone from "src@/assets/images/Veli-clone.png";
 
 import weatherImage from "src@/assets/images/weatherApp.png";
@@ -76,6 +78,25 @@ export const PROJECTES: ProjectType[] = [
     ],
     live: "https://inventorymanagement-liard.vercel.app/",
     code: "https://github.com/Beqa-Elashvili/inventory-management",
+  },
+  {
+    id: uuidv4(),
+    title: "BOG Mobile Bank",
+    image: Bog,
+    description:
+      "The Bog-Bank Mobile Project is a user-friendly mobile banking application designed to offer secure, seamless, and convenient banking services on the go. It allows users to manage their accounts, transfer funds, and access real-time transaction history, all from their smartphones. The app focuses on providing a smooth user experience while maintaining high security standards to protect sensitive financial information",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "express",
+      "TypeScript",
+      "redux redux/toolkit",
+      "MongoDb",
+      "Prisma",
+      "Tailwind CSS",
+    ],
+    live: "https://bog-app-zeta.vercel.app/",
+    code: "https://github.com/Beqa-Elashvili/BOG-clone",
   },
   {
     id: uuidv4(),
