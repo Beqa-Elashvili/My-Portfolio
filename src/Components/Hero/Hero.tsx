@@ -2,51 +2,96 @@ import { motion } from "framer-motion";
 import image from "src@/assets/images/Hero.jpg";
 
 export function Hero() {
-  const container = (delay: number) => ({
-    hidden: { x: -100, opacity: 0 },
+  const fadeUp = (delay: number) => ({
+    hidden: { y: 24, opacity: 0 },
     visible: {
-      x: 0,
+      y: 0,
       opacity: 1,
-      transition: { duration: 0.5, delay: delay },
+      transition: { duration: 0.6, delay },
     },
   });
+
   return (
-    <div className="block justify-between gap-4 items-center space-y-4 md:flex md:justify-center  md:items-start md: w-full">
-      <div className="font-thin mt-12  flex flex-col items-center justify-center text-center lg:items-start lg:text-start">
-        <motion.h1
-          variants={container(0)}
-          initial="hidden"
-          animate="visible"
-          className="text-6xl"
+    <section className="section-container pt-8 md:pt-16">
+      <div className="flex flex-col-reverse md:flex-row justify-between gap-10 items-center">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-2xl">
+          <motion.p
+            variants={fadeUp(0)}
+            initial="hidden"
+            animate="visible"
+            className="text-sm font-medium tracking-widest uppercase text-accent-light mb-4"
+          >
+            Software Engineer
+          </motion.p>
+
+          <motion.h1
+            variants={fadeUp(0.1)}
+            initial="hidden"
+            animate="visible"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight"
+          >
+            Beqa Elashvili
+          </motion.h1>
+
+          <motion.p
+            variants={fadeUp(0.2)}
+            initial="hidden"
+            animate="visible"
+            className="text-xl md:text-2xl mt-4 font-light text-neutral-400"
+          >
+            Generative AI &{" "}
+            <span className="bg-gradient-to-r from-accent-light to-violet-400 bg-clip-text text-transparent font-medium">
+              Full-Stack Developer
+            </span>
+          </motion.p>
+
+          <motion.p
+            variants={fadeUp(0.35)}
+            initial="hidden"
+            animate="visible"
+            className="mt-6 text-neutral-400 leading-relaxed text-base md:text-lg"
+          >
+            I build scalable, high-performance web and AI-powered applications
+            with React, Next.js, TypeScript, and modern LLM integrations.
+            Passionate about intelligent, user-centric experiences and
+            production-ready software.
+          </motion.p>
+
+          <motion.div
+            variants={fadeUp(0.5)}
+            initial="hidden"
+            animate="visible"
+            className="flex flex-wrap gap-3 mt-8 justify-center md:justify-start"
+          >
+            <a
+              href="#projects"
+              className="px-6 py-2.5 rounded-lg bg-accent hover:bg-accent-muted text-white text-sm font-medium transition-colors duration-200 shadow-glow"
+            >
+              View Projects
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-2.5 rounded-lg border border-surface-border hover:border-accent/50 text-neutral-300 text-sm font-medium transition-colors duration-200"
+            >
+              Get in Touch
+            </a>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="relative shrink-0"
         >
-          BEQA ELASHVILI
-        </motion.h1>
-        <motion.p
-          variants={container(0.5)}
-          initial="hidden"
-          animate="visible"
-          className="text-4xl mt-4 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-transparent tracking-tight"
-        >
-          Front-end Developer
-        </motion.p>
-        <motion.p
-          variants={container(1)}
-          initial="hidden"
-          animate="visible"
-          className="max-w-xl mt-8"
-        >
-          I’m a Front-End Developer with experience in React, Next.js,
-          TypeScript, and JavaScript, focused on building responsive and
-          user-friendly web applications. I also work with Prisma, Pusher,
-          PostgreSQL, and MongoDB for full-stack development. I'm always eager
-          to take on new challenges and grow my skills.
-        </motion.p>
+          <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-accent/30 to-violet-600/20 blur-xl" />
+          <img
+            className="relative w-64 md:w-72 lg:w-80 rounded-2xl shadow-card object-cover aspect-square"
+            src={image}
+            alt="Beqa Elashvili"
+          />
+        </motion.div>
       </div>
-      <img
-        className="w-full md:w-2/6 m-auto rounded-lg shadow-2xl"
-        src={image}
-        alt="img"
-      />
-    </div>
+    </section>
   );
 }

@@ -1,46 +1,76 @@
 import { motion } from "framer-motion";
 import aboutImg from "src@/assets/images/aboutimg.png";
+import { SectionHeading } from "../ui/SectionHeading";
+
+const HIGHLIGHTS = [
+  "Front-end development with React, Next.js, TypeScript, and Tailwind CSS",
+  "Generative AI solutions using LLMs, RAG, AI agents, and prompt engineering",
+  "Full-stack architecture with Node.js, PostgreSQL, MongoDB, and Supabase",
+  "Real-time applications with WebSockets, Pusher, and voice AI technologies",
+];
 
 export function About() {
   return (
-    <div>
-      <h1 className="text-center text-3xl">
-        About <span className="text-neutral-400">Me</span>
-      </h1>
-      <div className="block md:flex  gap-4 justify-center xl:justify-between mt-6">
-        <motion.img
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-          className="rounded-2xl  lg:w-1/2 w-full md:w-1/2"
-          src={aboutImg}
-          alt="aboutImg"
-        />
+    <section id="about" className="section-container section-divider pt-24">
+      <SectionHeading title="About" subtitle="Me" />
+
+      <div className="flex flex-col lg:flex-row gap-10 items-center">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: -30 }}
           transition={{ duration: 0.5 }}
-          className="max-w-xl mt-4 text-center lg:text-start xl:mt-0"
+          viewport={{ once: true }}
+          className="relative shrink-0 w-full lg:w-2/5"
         >
-          I have strong experience in building modern, responsive, and dynamic
-          web applications. My strengths lie in creating scalable and efficient
-          applications using React and Next.js, and writing clean, maintainable
-          code with TypeScript and JavaScript. I’m also skilled in using
-          Tailwind CSS to design polished, responsive layouts that enhance the
-          user experience. Developed and optimized global state management using
-          Redux's Provider and store to centralize state across multiple React
-          components, improving the consistency and reliability of the
-          application. On the back end, I have experience working with Prisma,
-          Pusher, PostgreSQL, and MongoDB for efficient database management and
-          real-time data handling. I am proficient in building secure and robust
-          back-end architectures to support seamless front-end experiences. I
-          have successfully worked on projects such as a Car Rental Application,
-          a Messenger Clone, and an Inventory Management System. Each of these
-          projects demonstrates my ability to build complex full-stack
-          applications, manage real-time data, and create intuitive,
-          user-friendly solutions.
+          <div className="absolute -inset-2 rounded-2xl bg-card-gradient" />
+          <img
+            className="relative rounded-2xl w-full shadow-card object-cover"
+            src={aboutImg}
+            alt="About Beqa Elashvili"
+          />
+        </motion.div>
+
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 30 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="flex-1 space-y-5"
+        >
+          <p className="text-neutral-300 leading-relaxed">
+            Experienced Software Engineer specializing in front-end development
+            and Generative AI. I design and deliver scalable, high-performance
+            web applications and intelligent AI-powered products — from
+            responsive interfaces to RAG pipelines and conversational agents.
+          </p>
+          <p className="text-neutral-400 leading-relaxed text-sm">
+            Skilled in modern frontend architecture, state management, and
+            performance optimization, with deep experience integrating AI
+            services through Node.js, Python, REST APIs, and the Gemini API. I
+            deliver clean, maintainable, production-ready code across the full
+            stack.
+          </p>
+
+          <ul className="space-y-3 pt-2">
+            {HIGHLIGHTS.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 text-sm text-neutral-400"
+              >
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div className="flex flex-wrap gap-4 pt-2 text-sm text-neutral-500">
+            <span>
+              <span className="text-neutral-300 font-medium">Languages:</span>{" "}
+              Georgian (Native), English (B2)
+            </span>
+          </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
