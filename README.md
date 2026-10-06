@@ -1,27 +1,34 @@
-# React + TypeScript + Vite
+# Beqa Elashvili — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio built with Next.js (App Router), React, TypeScript and Tailwind CSS v4.
+The page is fully static: every section is a server component, and the only client JavaScript is the
+header (active section, mobile menu) and a single scroll-reveal observer.
 
-Currently, two official plugins are available:
+## Develop
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run lint
+npm run typecheck
+npm run build
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Structure
+
+```
+src/
+  app/          layout, page, metadata routes (Open Graph image, icon, sitemap, robots)
+  components/   header, footer, section wrapper, sections/, work/ (project cards, pipeline)
+  content/      all copy and data: site, projects, experience, skills
+  assets/       portrait and project screenshots (imported statically for next/image)
+  lib/          small helpers
+```
+
+To change the content, edit the files in `src/content/`. The components only render that data.
+
+## Environment
+
+| Variable | Description |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Canonical URL used for metadata, Open Graph, sitemap and robots. Defaults to the current Vercel deployment. |

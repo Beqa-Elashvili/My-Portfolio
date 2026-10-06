@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #e8e5df;
+  --color-paper-raised: #efede8;
+  --color-paper-sunken: #dfdbd3;
+  --color-ink: #191816;
+  --color-ink-soft: #3b3935;
+  --color-muted: #5f5b54;
+  --color-line: #d3cec4;
+  --color-line-strong: #b9b3a7;
+  --color-accent: #a4472a;
+  --color-accent-soft: #e08b68;
+  --color-night: #161513;
+  --color-night-line: #2f2c29;
+  --color-night-muted: #a19c93;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+
+  --ease-out-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+
+    @media (width >= 48rem) {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Faint engineering grid behind the hero, faded out toward the edges. */
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, rgb(25 24 22 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(25 24 22 / 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 70% 60% at 30% 35%, black 20%, transparent 75%);
+  }
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+.enter {
+  animation: enter 0.9s var(--ease-out-soft) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+/* Scroll reveals only hide content once JS has confirmed it can reveal it again. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.8s var(--ease-out-soft),
+    transform 0.8s var(--ease-out-soft);
+  transition-delay: var(--delay, 0ms);
+}
+
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .enter {
+    animation: none;
+  }
+
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
