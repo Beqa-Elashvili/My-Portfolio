@@ -56,9 +56,14 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "Data",
-    description: "Storage, vectors and pipelines",
+    description: "Warehousing, pipelines and BI",
     skills: [
       "PostgreSQL",
+      "SQL & data warehousing",
+      "ETL / ELT",
+      "Data quality",
+      "pandas",
+      "Power BI & DAX",
       "pgvector",
       "Supabase",
       "Prisma",

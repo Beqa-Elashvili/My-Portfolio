@@ -6,6 +6,45 @@ import inventoryImage from "@/assets/projects/inventory.png";
 
 export const featuredProjects: FeaturedProject[] = [
   {
+    slug: "autosphere-analytics",
+    name: "AutoSphere Analytics: BI & AI Platform",
+    summary:
+      "End-to-end BI platform for a fictional automotive company: messy source data becomes a PostgreSQL star schema, trusted KPIs, Power BI dashboards and AI-classified customer feedback.",
+    problem:
+      "Management needs one trusted view of sales, service and customer satisfaction across branches, but the source data is messy and customer feedback is free text in Georgian and English.",
+    role: "Solo: data modelling, ETL, data quality, analytics, AI, BI",
+    year: "2026",
+    pipeline: [
+      "Raw CSV · 11 tables",
+      "Python ETL + quality gates",
+      "PostgreSQL star schema",
+      "Gemini feedback NLP",
+      "KPI & Power BI layer",
+      "Dashboards + daily report",
+    ],
+    highlights: [
+      "Hybrid ETL/ELT: Python cleans the data and quarantines every invalid row with a reason. SQL builds a star schema with surrogate keys, Unknown members and SCD Type 2 customers.",
+      "Data quality framework: 340 declarative checks across four gates on every run. A critical failure rolls the load back, and raw rows always equal clean plus quarantined rows.",
+      "KPI layer with comparable periods: year-to-date growth of +15.6% instead of the misleading −18.5% you get from comparing a partial year with a full one. Every KPI is computed three independent ways in tests.",
+      "Bilingual feedback classification with Gemini structured output, validation and a deterministic fallback: 95.7% sentiment and 98% topic accuracy, cached so no comment is paid for twice.",
+      "Power BI semantic layer with 79 documented DAX measures, a scheduled management report with rule-based alerts, 238 pytest tests and a one-command end-to-end validation.",
+    ],
+    stack: [
+      "Python",
+      "pandas",
+      "PostgreSQL",
+      "SQL",
+      "Power BI",
+      "DAX",
+      "Gemini",
+      "pytest",
+      "GitHub Actions",
+    ],
+    links: [
+      { label: "Code", href: "https://github.com/Beqa-Elashvili/AutoSphere-Analytics" },
+    ],
+  },
+  {
     slug: "ai-knowledge-base",
     name: "AI Knowledge Base",
     summary:
